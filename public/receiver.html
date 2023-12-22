@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Share your file securely</h2>
+          <div class="form-input">
+            <label for="join-id">Join ID</label>
+            <input type="text" id="join-id">
+          </div>
+          <div class="form-input">
+            <button id="receiver-start-con-btn">Connect</button>
+          </div>
+        </div>
+      </div>
+      <div class="screen fs-screen">
+        
+        <div class="files-list">
+            <div class="title">Shared files:</div>
+            <!-- <div class="item">
+                <div class="progress">0%</div>
+                <div class="filename">Abc.txt</div>
+            </div> -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- <script type="tzext/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dowmloadjs/1.4.1/download.min.js"></script> -->
+    <script type="tzext/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="tzext/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+  </body>
+</html>
