@@ -154,3 +154,36 @@ body {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+/* Logo Container */
+.logo-container {
+  margin-top: 15px;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container .logo-img-container {
+  height: 100%;
+  width: 40%;
+  border-radius: 28% 72% 70% 30% / 30% 42% 58% 70%;
+  background: rgb(127, 160, 218);
+  background: radial-gradient(
+    circle,
+    rgba(127, 160, 218, 1) 0%,
+    rgba(180, 174, 238, 1) 17%,
+    rgba(163, 233, 148, 1) 77%,
+    rgba(83, 205, 99, 1) 98%,
+    rgba(5, 105, 38, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.7);
+}
+
+.logo-container .logo-img-container img {
+  height: 50%;
+  width: 50%;
+}
