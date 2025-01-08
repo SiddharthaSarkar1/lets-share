@@ -9,11 +9,16 @@
   <body>
     <div class="app">
       <div class="screen join-screen active">
+        <div class="logo-container">
+          <div class="logo-img-container">
+            <img src="./img/file-sharing.png" alt="File Sharing Logo" />
+          </div>
+        </div>
         <div class="form">
           <h2>Share your file securely</h2>
           <div class="form-input">
             <label for="join-id">Join ID</label>
-            <input type="text" id="join-id">
+            <input type="text" id="join-id" />
           </div>
           <div class="form-input">
             <button id="receiver-start-con-btn">Connect</button>
@@ -21,18 +26,20 @@
         </div>
       </div>
       <div class="screen fs-screen">
-        
         <div class="files-list">
-            <div class="title">Shared files:</div>
-            <!-- <div class="item">
+          <div class="title">Shared files:</div>
+          <!-- <div class="item">
                 <div class="progress">0%</div>
                 <div class="filename">Abc.txt</div>
             </div> -->
         </div>
       </div>
     </div>
-    
-    <script type="tzext/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dowmloadjs/1.4.1/download.min.js"></script>
+
+    <script
+      type="tzext/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/dowmloadjs/1.4.1/download.min.js"
+    ></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="socket.io/socket.io.js"></script>
     <script type="text/javascript" src="receiver.js"></script>
