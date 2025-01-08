@@ -1,6 +1,7 @@
 (function () {
   let receiverID;
   const socket = io();
+  let baseURL = getBaseUrl();
 
   function generateID() {
     return `${Math.trunc(Math.random() * 999)}-${Math.trunc(
@@ -14,11 +15,35 @@
       document.querySelector("#join-id").innerHTML = `
             <b>Room ID</b>
             <span>${joinID}</span>
+            <br/>
+            <p>Copy and share the <u>Room ID</u> with the receiver.</p>
+
         `;
       socket.emit("sender-join", {
         uid: joinID,
       });
+      document.querySelector("#receiver-start-con-btn1").style.display = "none";
     });
+
+  document
+    .querySelector("#receiver-start-con-btn1")
+    .addEventListener("click", function () {
+      window.location.href = `${baseURL}/receiver.html`;
+    });
+
+  function getBaseUrl() {
+    const { protocol, hostname, port } = window.location;
+    // Construct the base URL
+    let baseUrl = `${protocol}//${hostname}`;
+    // Include port if it's not the default (80 for HTTP and 443 for HTTPS)
+    if (
+      (protocol === "http:" && port !== "80") ||
+      (protocol === "https:" && port !== "443")
+    ) {
+      baseUrl += `:${port}`;
+    }
+    return baseUrl;
+  }
 
   socket.on("init", function (uid) {
     receiverID = uid;
